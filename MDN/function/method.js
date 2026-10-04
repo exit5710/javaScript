@@ -2,7 +2,7 @@
 
 {
 	// https://ko.javascript.info/object-methods
-	// C:/java/script/vsCoding/MDN/function/method.html
+	// C:/projects/development/javaScript/MDN/function/method.html
 
 	fn_newLine('method - this');
 
