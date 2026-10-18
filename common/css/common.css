@@ -1,3 +1,7 @@
+html, body {
+	background-color: #202124;
+}
+
 button {
 	cursor: pointer;
 }
@@ -5,4 +9,44 @@ button {
 .background-txt {
 	font-size: 20px;
 	color: #ACB2A0;
+}
+
+.btn-box {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.btn-glass {
+	/* 1. CSS로 배경 이미지를 지정하고 위치를 잡습니다 */
+	background-image: url('./../images/refresh.png'); /* 이미지 경로 입력 */
+	background-repeat: no-repeat;
+	background-position: right 20px center; /* 우측에서 20px 떨어진 중앙에 배치 */
+	background-size: 16px 16px;             /* 이미지 크기를 16px로 제한 */
+
+	/* 2. 글자가 이미지에 가려지지 않도록 오른쪽 여백(padding-right)을 기존 28px에서 늘려줍니다 */
+	padding: 14px 44px 14px 28px; /* 상 우 하 좌 (우측만 44px로 확대) */
+	
+	font-size: 16px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(255, 255, 255, 0.05); /* 단축 속성 background 대신 background-color로 분리하여 이미지 유지 */
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 12px;
+	cursor: pointer;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 마우스를 올렸을 때 */
+.btn-glass:hover {
+	background-color: rgba(255, 255, 255, 0.15); /* background 대신 background-color 변경 */
+	border-color: rgba(255, 255, 255, 0.3);
+	color: #ffffff;
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* 클릭했을 때 */
+.btn-glass:active {
+	background-color: rgba(255, 255, 255, 0.1); /* background 대신 background-color 변경 */
 }
