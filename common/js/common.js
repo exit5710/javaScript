@@ -4,7 +4,8 @@ const fn_init = function () {
 	document.body.style.margin = 0;
 	document.body.style.width = 'calc(100vw - 22px)';
 	document.body.style.height = 'calc(100vh - 22px)';
-	document.body.style.backgroundColor = '#202124';
+	// document.body.style.backgroundColor = '#202124';
+	document.getElementById('title').innerText = document.title;
 };
 
 const fn_newLine = function (...args) {
@@ -13,6 +14,10 @@ const fn_newLine = function (...args) {
 	} else {
 		console.log('\n--- ' + args + ' ----------------------------------------');
 	}
+};
+
+const fn_refresh = function () {
+	location.reload();
 };
 
 const fn_addZero = function (number, addNumber = 2) {
